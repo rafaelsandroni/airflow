@@ -1,0 +1,25 @@
+[2019-03-22 04:25:18,687] {models.py:1359} INFO - Dependencies all met for <TaskInstance: tutorial.print_date 2019-01-10T00:00:00+00:00 [queued]>
+[2019-03-22 04:25:18,691] {models.py:1359} INFO - Dependencies all met for <TaskInstance: tutorial.print_date 2019-01-10T00:00:00+00:00 [queued]>
+[2019-03-22 04:25:18,691] {models.py:1571} INFO - 
+--------------------------------------------------------------------------------
+Starting attempt 1 of 2
+--------------------------------------------------------------------------------
+
+[2019-03-22 04:25:18,736] {models.py:1593} INFO - Executing <Task(BashOperator): print_date> on 2019-01-10T00:00:00+00:00
+[2019-03-22 04:25:18,736] {base_task_runner.py:118} INFO - Running: ['bash', '-c', 'airflow run tutorial print_date 2019-01-10T00:00:00+00:00 --job_id 2712 --raw -sd DAGS_FOLDER/tutorial.py --cfg_path /tmp/tmpcsku2tlv']
+[2019-03-22 04:25:20,817] {base_task_runner.py:101} INFO - Job 2712: Subtask print_date [2019-03-22 04:25:20,810] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-03-22 04:25:21,316] {base_task_runner.py:101} INFO - Job 2712: Subtask print_date [2019-03-22 04:25:21,315] {models.py:273} INFO - Filling up the DagBag from /home/rsandroni/airflow/dags/tutorial.py
+[2019-03-22 04:25:21,358] {base_task_runner.py:101} INFO - Job 2712: Subtask print_date [2019-03-22 04:25:21,355] {cli.py:520} INFO - Running <TaskInstance: tutorial.print_date 2019-01-10T00:00:00+00:00 [running]> on host IADAIRP1.globalrs.rack.space
+[2019-03-22 04:25:21,402] {bash_operator.py:77} INFO - Tmp dir root location: 
+ /tmp
+[2019-03-22 04:25:21,403] {bash_operator.py:86} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_ID=tutorial
+AIRFLOW_CTX_TASK_ID=print_date
+AIRFLOW_CTX_EXECUTION_DATE=2019-01-10T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-01-10T00:00:00+00:00
+[2019-03-22 04:25:21,403] {bash_operator.py:100} INFO - Temporary script location: /tmp/airflowtmpftqivat4/print_date03oz6h9r
+[2019-03-22 04:25:21,403] {bash_operator.py:110} INFO - Running command: date
+[2019-03-22 04:25:21,468] {bash_operator.py:119} INFO - Output:
+[2019-03-22 04:25:21,500] {bash_operator.py:123} INFO - Sex Mar 22 04:25:21 -03 2019
+[2019-03-22 04:25:21,511] {bash_operator.py:127} INFO - Command exited with return code 0
+[2019-03-22 04:25:23,753] {logging_mixin.py:95} INFO - [2019-03-22 04:25:23,752] {jobs.py:2527} INFO - Task exited with return code 0

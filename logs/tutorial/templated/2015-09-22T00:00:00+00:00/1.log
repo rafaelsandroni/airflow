@@ -1,0 +1,60 @@
+[2019-03-19 11:14:58,982] {models.py:1359} INFO - Dependencies all met for <TaskInstance: tutorial.templated 2015-09-22T00:00:00+00:00 [queued]>
+[2019-03-19 11:14:58,986] {models.py:1359} INFO - Dependencies all met for <TaskInstance: tutorial.templated 2015-09-22T00:00:00+00:00 [queued]>
+[2019-03-19 11:14:58,986] {models.py:1571} INFO - 
+--------------------------------------------------------------------------------
+Starting attempt 1 of 2
+--------------------------------------------------------------------------------
+
+[2019-03-19 11:14:59,003] {models.py:1593} INFO - Executing <Task(BashOperator): templated> on 2015-09-22T00:00:00+00:00
+[2019-03-19 11:14:59,004] {base_task_runner.py:118} INFO - Running: ['bash', '-c', 'airflow run tutorial templated 2015-09-22T00:00:00+00:00 --job_id 234 --raw -sd DAGS_FOLDER/example_dags/tutorial.py --cfg_path /tmp/tmpmoi0f4eg']
+[2019-03-19 11:14:59,602] {base_task_runner.py:101} INFO - Job 234: Subtask templated [2019-03-19 11:14:59,601] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-03-19 11:14:59,816] {base_task_runner.py:101} INFO - Job 234: Subtask templated [2019-03-19 11:14:59,815] {models.py:273} INFO - Filling up the DagBag from /home/rsandroni/airflow/dags/example_dags/tutorial.py
+[2019-03-19 11:14:59,856] {base_task_runner.py:101} INFO - Job 234: Subtask templated [2019-03-19 11:14:59,856] {cli.py:520} INFO - Running <TaskInstance: tutorial.templated 2015-09-22T00:00:00+00:00 [running]> on host IADAIRP1.globalrs.rack.space
+[2019-03-19 11:14:59,872] {bash_operator.py:77} INFO - Tmp dir root location: 
+ /tmp
+[2019-03-19 11:14:59,873] {bash_operator.py:86} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_ID=tutorial
+AIRFLOW_CTX_TASK_ID=templated
+AIRFLOW_CTX_EXECUTION_DATE=2015-09-22T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2015-09-22T00:00:00+00:00
+[2019-03-19 11:14:59,873] {bash_operator.py:100} INFO - Temporary script location: /tmp/airflowtmpmcuknozs/templatedw2w221nb
+[2019-03-19 11:14:59,873] {bash_operator.py:110} INFO - Running command: 
+
+    echo "2015-09-22"
+    echo "2015-09-29"
+    echo "Parameter I passed in"
+
+    echo "2015-09-22"
+    echo "2015-09-29"
+    echo "Parameter I passed in"
+
+    echo "2015-09-22"
+    echo "2015-09-29"
+    echo "Parameter I passed in"
+
+    echo "2015-09-22"
+    echo "2015-09-29"
+    echo "Parameter I passed in"
+
+    echo "2015-09-22"
+    echo "2015-09-29"
+    echo "Parameter I passed in"
+
+[2019-03-19 11:14:59,879] {bash_operator.py:119} INFO - Output:
+[2019-03-19 11:14:59,880] {bash_operator.py:123} INFO - 2015-09-22
+[2019-03-19 11:14:59,880] {bash_operator.py:123} INFO - 2015-09-29
+[2019-03-19 11:14:59,880] {bash_operator.py:123} INFO - Parameter I passed in
+[2019-03-19 11:14:59,880] {bash_operator.py:123} INFO - 2015-09-22
+[2019-03-19 11:14:59,880] {bash_operator.py:123} INFO - 2015-09-29
+[2019-03-19 11:14:59,880] {bash_operator.py:123} INFO - Parameter I passed in
+[2019-03-19 11:14:59,880] {bash_operator.py:123} INFO - 2015-09-22
+[2019-03-19 11:14:59,880] {bash_operator.py:123} INFO - 2015-09-29
+[2019-03-19 11:14:59,880] {bash_operator.py:123} INFO - Parameter I passed in
+[2019-03-19 11:14:59,880] {bash_operator.py:123} INFO - 2015-09-22
+[2019-03-19 11:14:59,880] {bash_operator.py:123} INFO - 2015-09-29
+[2019-03-19 11:14:59,880] {bash_operator.py:123} INFO - Parameter I passed in
+[2019-03-19 11:14:59,880] {bash_operator.py:123} INFO - 2015-09-22
+[2019-03-19 11:14:59,880] {bash_operator.py:123} INFO - 2015-09-29
+[2019-03-19 11:14:59,881] {bash_operator.py:123} INFO - Parameter I passed in
+[2019-03-19 11:14:59,881] {bash_operator.py:127} INFO - Command exited with return code 0
+[2019-03-19 11:15:03,982] {logging_mixin.py:95} INFO - [2019-03-19 11:15:03,981] {jobs.py:2527} INFO - Task exited with return code 0

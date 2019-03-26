@@ -1,0 +1,54 @@
+[2019-03-19 13:59:38,349] {models.py:1359} INFO - Dependencies all met for <TaskInstance: tutorial.templated 2016-09-14T00:00:00+00:00 [queued]>
+[2019-03-19 13:59:38,354] {models.py:1359} INFO - Dependencies all met for <TaskInstance: tutorial.templated 2016-09-14T00:00:00+00:00 [queued]>
+[2019-03-19 13:59:38,354] {models.py:1571} INFO - 
+--------------------------------------------------------------------------------
+Starting attempt 1 of 2
+--------------------------------------------------------------------------------
+
+[2019-03-19 13:59:38,458] {models.py:1593} INFO - Executing <Task(BashOperator): templated> on 2016-09-14T00:00:00+00:00
+[2019-03-19 13:59:38,458] {base_task_runner.py:118} INFO - Running: ['bash', '-c', 'airflow run tutorial templated 2016-09-14T00:00:00+00:00 --job_id 951 --raw -sd DAGS_FOLDER/sql_server_load.py --cfg_path /tmp/tmpy4drelrf']
+[2019-03-19 13:59:41,675] {base_task_runner.py:101} INFO - Job 951: Subtask templated [2019-03-19 13:59:41,675] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-03-19 13:59:42,692] {base_task_runner.py:101} INFO - Job 951: Subtask templated [2019-03-19 13:59:42,684] {models.py:273} INFO - Filling up the DagBag from /home/rsandroni/airflow/dags/sql_server_load.py
+[2019-03-19 13:59:42,745] {base_task_runner.py:101} INFO - Job 951: Subtask templated [2019-03-19 13:59:42,742] {cli.py:520} INFO - Running <TaskInstance: tutorial.templated 2016-09-14T00:00:00+00:00 [running]> on host IADAIRP1.globalrs.rack.space
+[2019-03-19 13:59:42,790] {bash_operator.py:77} INFO - Tmp dir root location: 
+ /tmp
+[2019-03-19 13:59:42,790] {bash_operator.py:86} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_ID=tutorial
+AIRFLOW_CTX_TASK_ID=templated
+AIRFLOW_CTX_EXECUTION_DATE=2016-09-14T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2016-09-14T00:00:00+00:00
+[2019-03-19 13:59:42,791] {bash_operator.py:100} INFO - Temporary script location: /tmp/airflowtmplqd_zfqn/templated0klmzfuv
+[2019-03-19 13:59:42,791] {bash_operator.py:110} INFO - Running command: 
+    
+        echo "2016-09-14"
+        echo "Parameter I passed in"
+    
+        echo "2016-09-14"
+        echo "Parameter I passed in"
+    
+        echo "2016-09-14"
+        echo "Parameter I passed in"
+    
+        echo "2016-09-14"
+        echo "Parameter I passed in"
+    
+        echo "2016-09-14"
+        echo "Parameter I passed in"
+    
+    
+[2019-03-19 13:59:42,849] {bash_operator.py:119} INFO - Output:
+[2019-03-19 13:59:42,850] {bash_operator.py:123} INFO - 2016-09-14
+[2019-03-19 13:59:42,850] {bash_operator.py:123} INFO - Parameter I passed in
+[2019-03-19 13:59:42,850] {bash_operator.py:123} INFO - 2016-09-14
+[2019-03-19 13:59:42,850] {bash_operator.py:123} INFO - Parameter I passed in
+[2019-03-19 13:59:42,850] {bash_operator.py:123} INFO - 2016-09-14
+[2019-03-19 13:59:42,850] {bash_operator.py:123} INFO - Parameter I passed in
+[2019-03-19 13:59:42,851] {bash_operator.py:123} INFO - 2016-09-14
+[2019-03-19 13:59:42,851] {bash_operator.py:123} INFO - Parameter I passed in
+[2019-03-19 13:59:42,851] {bash_operator.py:123} INFO - 2016-09-14
+[2019-03-19 13:59:42,851] {bash_operator.py:123} INFO - Parameter I passed in
+[2019-03-19 13:59:42,851] {bash_operator.py:127} INFO - Command exited with return code 0
+[2019-03-19 13:59:43,308] {logging_mixin.py:95} INFO - [2019-03-19 13:59:43,308] {jobs.py:2595} WARNING - State of this instance has been externally set to success. Taking the poison pill.
+[2019-03-19 13:59:43,339] {helpers.py:250} INFO - Sending Signals.SIGTERM to GPID 28342
+[2019-03-19 13:59:43,398] {helpers.py:232} INFO - Process psutil.Process(pid=28342, status='terminated') (28342) terminated with exit code -15
+[2019-03-19 13:59:43,399] {logging_mixin.py:95} INFO - [2019-03-19 13:59:43,398] {jobs.py:2527} INFO - Task exited with return code 0
